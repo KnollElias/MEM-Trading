@@ -76,3 +76,10 @@ ws.on("close", () => {
 ws.on("error", err => {
   console.error("error", err);
 });
+
+async function getBTCUSD() {
+  let btcprice = ws.subscribe("kline.BTCUSD.1m");
+  return await btcprice
+}
+
+module.exports = { getBTCUSD }
