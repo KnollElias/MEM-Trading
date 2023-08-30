@@ -36,7 +36,7 @@ function checkOutcome(prediction, currentPrice, nextPrice) {
 const outputCsv = fs.createWriteStream('output_with_outcome.csv');
 outputCsv.write('Index,ClosingPrice,Prediction,Outcome,ConsecutiveLosses\n');
 
-fs.createReadStream('./CHFUSDDaily.csv')
+fs.createReadStream('./EURUSDDaily.csv')
   .pipe(csv())
   .on('data', (row) => closingPrices.push(parseFloat(row.Close)))
   .on('end', () => {
