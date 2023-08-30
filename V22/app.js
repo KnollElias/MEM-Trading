@@ -4,7 +4,6 @@ const csv = require('csv-parser');
 if (fs.existsSync('output_with_outcome.csv')) fs.unlinkSync('output_with_outcome.csv');
 
 let closingPrices = [];
-let outcomes = [];
 let lossCount = 0;
 
 function predictDirection(closingPrices, smaPeriod, emaPeriod) {
@@ -46,13 +45,11 @@ fs.createReadStream('./CHFUSDDaily.csv')
     for (let i = Math.max(smaPeriod, emaPeriod); i < closingPrices.length - 1; i++) {
       const slice = closingPrices.slice(i - Math.max(smaPeriod, emaPeriod), i);
       const prediction = predictDirection(slice, smaPeriod, emaPeriod);
-      const outcome = checkOutcome(prediction, closingPrices[i], closingPrices[i + 1]);
+      const outcome = (prediction !== "Neutral") ? checkOutcome(prediction, closingPrices[i], closingPrices[i + 1]) : "Neutral";
       if (outcome === "Loss") lossCount++;
-      else lossCount = 0;
-      outcomes.push(outcome);
+      else if (outcome === "Win") lossCount = 0;
       console.log(`Prediction for index ${i} is: ${prediction}, Outcome: ${outcome}, Closing Price: ${closingPrices[i]}, ConsecutiveLosses: ${lossCount}`);
-      outputCsv.write(`Prediction for index ${i} is: ${prediction}, Outcome: ${outcome}, Closing Price: ${closingPrices[i]}, ConsecutiveLosses: ${lossCount}\n`);
-      // outputCsv.write(`${i},${closingPrices[i]},${prediction},${outcome},${lossCount}\n`);
+      outputCsv.write(`${i},${closingPrices[i]},${prediction},${outcome},${(outcome !== "Neutral") ? lossCount : ''}\n`);
     }
     outputCsv.end();
   });
