@@ -9,7 +9,7 @@ loss = 1;
 gain = 0.9;
 riskMulityplier = 2;
 
-iterations = 16 * 2;
+iterations = 16000;
 
 function upgradeNode() {
     nodeActive = nodeActive == nodeCount ? 1 : nodeActive + 1;
@@ -37,10 +37,16 @@ for (i = 0; i < iterations; i++) {
         balances[nodeActive - 1] -= risk[nodeActive - 1] * loss;
     }
 
-    if (((i+1) / nodeCount) == 0) {
-        console.log(" asd ");
+    if ((i % nodeCount) == 0) {
+        console.log("  ");
     }
-    console.log("Iteration: " + i + " Node: " + nodeActive + " Win: " + winThisRound + " Risk: " + risk[nodeActive - 1]);
+    
+    if (balances[nodeActive - 1] > 0) {
+        console.log("%cI: " + i + " Node: " + nodeActive + " Win: " + winThisRound + " Risk: " + risk[nodeActive - 1] + " Bal: " + balances[nodeActive - 1], "color: green;");
+    } else {
+        console.log("%cI: " + i + " Node: " + nodeActive + " Win: " + winThisRound + " Risk: " + risk[nodeActive - 1] + " Bal: " + balances[nodeActive - 1], "color: red;");
+        balances[nodeActive - 1] = 0;
+    }
 }
 
 console.log(balances);
