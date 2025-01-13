@@ -11,7 +11,7 @@ loss = 1;
 gain = 0.9;
 riskMulityplier = 2;
 
-iterations = 36;
+iterations = 3600;
 
 function upgradeNode() {
     nodeActive = nodeActive == nodeCount ? 1 : nodeActive + 1;
