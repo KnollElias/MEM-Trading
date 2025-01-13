@@ -1,0 +1,11 @@
+{
+  "name": "splitmartin",
+  "version": "25.1.1",
+  "description": "test to evaluate split use of martin scales",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
