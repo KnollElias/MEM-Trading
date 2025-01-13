@@ -11,7 +11,7 @@ loss = 1;
 gain = 0.9;
 riskMulityplier = 2;
 
-iterations = 16000;
+iterations = 36;
 
 function upgradeNode() {
     nodeActive = nodeActive == nodeCount ? 1 : nodeActive + 1;
@@ -49,13 +49,13 @@ for (i = 0; i < iterations; i++) {
         console.warn("" + i + ", " + nodeActive  + ", " + winThisRound  + ", " + risk[nodeActive - 1]  + ", " + balances[nodeActive - 1]);
     } else {
         console.error("" + i  + ", " + nodeActive  + ", " + winThisRound  + ", " + risk[nodeActive - 1]  + ", " + balances[nodeActive - 1]);
+        break;
         balances[nodeActive - 1] = 0;
         risk[nodeActive - 1] = 0;
         balances[nodeActive - 1] = 0;
 
-        fs.appendFileSync('/home/main/Documents/GitHub/MEM-Trading/splitmartin/output_single.csv', `${i},\n`);
-        break;
     }
 }
 
+fs.appendFileSync('/home/main/Documents/GitHub/MEM-Trading/splitmartin/output_single.csv', `${balances},\n`);
 console.log(balances);

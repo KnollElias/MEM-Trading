@@ -1,5 +1,7 @@
-balances = [100, 100, 100, 100, 100, 100, 100, 100];
-balancesLastRound = [100, 100, 100, 100, 100, 100, 100, 100];
+const fs = require('fs');
+
+balances = [12.5, 12.5, 12.5, 12.5, 12.5, 12.5, 12.5, 12.5];
+balancesLastRound = [12.5, 12.5, 12.5, 12.5, 12.5, 12.5, 12.5, 12.5];
 nodeCount = 8;
 nodeActive = nodeCount; // so the first iteration starts with one, could also set it to "1" but meh
 
@@ -9,7 +11,7 @@ loss = 1;
 gain = 0.9;
 riskMulityplier = 2;
 
-iterations = 16000;
+iterations = 36;
 
 function upgradeNode() {
     nodeActive = nodeActive == nodeCount ? 1 : nodeActive + 1;
@@ -18,6 +20,8 @@ function upgradeNode() {
 function getRandomBool() {
     return Math.random() >= 0.5;
 }
+
+console.log("Index, " + " Node, " + " Outcome, " + " Risk, " + " Balance ");
 
 for (i = 0; i < iterations; i++) {
     upgradeNode();
@@ -38,15 +42,20 @@ for (i = 0; i < iterations; i++) {
     }
 
     if ((i % nodeCount) == 0) {
-        console.log("  ");
+        // console.log("  ");
     }
     
     if (balances[nodeActive - 1] > 0) {
-        console.log("%cI: " + i + " Node: " + nodeActive + " Win: " + winThisRound + " Risk: " + risk[nodeActive - 1] + " Bal: " + balances[nodeActive - 1], "color: green;");
+        console.warn("" + i + ", " + nodeActive  + ", " + winThisRound  + ", " + risk[nodeActive - 1]  + ", " + balances[nodeActive - 1]);
     } else {
-        console.log("%cI: " + i + " Node: " + nodeActive + " Win: " + winThisRound + " Risk: " + risk[nodeActive - 1] + " Bal: " + balances[nodeActive - 1], "color: red;");
+        console.error("" + i  + ", " + nodeActive  + ", " + winThisRound  + ", " + risk[nodeActive - 1]  + ", " + balances[nodeActive - 1]);
+        break;
         balances[nodeActive - 1] = 0;
+        risk[nodeActive - 1] = 0;
+        balances[nodeActive - 1] = 0;
+
     }
 }
 
+fs.appendFileSync('/home/main/Documents/GitHub/MEM-Trading/splitmartin/output_multi.csv', `${balances[0] + balances[1] + balances[2] + balances[3] + balances[4] + balances[5] + balances[6] + balances[7]},\n`);
 console.log(balances);
