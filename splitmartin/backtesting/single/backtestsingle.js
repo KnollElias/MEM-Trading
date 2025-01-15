@@ -25,7 +25,7 @@ const gain = 0.9;
 const riskMultiplier = 2;
 
 // Write header to output file
-fs.writeFileSync('/home/main/Documents/GitHub/MEM-Trading/splitmartin/backtest.csv', 'date,price,sma,trend,risk,balance\n');
+fs.writeFileSync(        '/home/main/Documents/GitHub/MEM-Trading/splitmartin/backtesting/singlebacktest.csv',  'date,price,sma,trend,risk,balance\n');
 
 // Main backtesting loop
 priceData.forEach((row, i) => {
@@ -56,8 +56,10 @@ priceData.forEach((row, i) => {
     // Update balance
     if (winThisRound) {
         balance += risk * gain;
+        risk = riskInitial;
     } else {
         balance -= risk * loss;
+        risk = (risk * 2);
     }
 
     // Record balance for next round comparison
@@ -65,7 +67,7 @@ priceData.forEach((row, i) => {
 
     // Output to CSV
     fs.appendFileSync(
-        '/home/main/Documents/GitHub/MEM-Trading/splitmartin/backtest.csv', 
+        '/home/main/Documents/GitHub/MEM-Trading/splitmartin/backtesting/singlebacktest.csv', 
         `${snapped_at},${price},${sma},${trend},${risk},${balance}\n`
     );
 });
