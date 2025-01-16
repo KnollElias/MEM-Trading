@@ -1,7 +1,10 @@
 const fs = require('fs');
 
+const inputPath = "/home/main/Documents/GitHub/MEM-Trading/splitmartin/btc-usd-edited.csv";
+const outputPath = "/home/main/Documents/GitHub/MEM-Trading/splitmartin/backtesting/singlebacktest.csv";
+
 // Load dataset
-const data = fs.readFileSync('/home/main/Documents/GitHub/MEM-Trading/splitmartin/btc-usd-edited.csv', 'utf8');
+const data = fs.readFileSync(inputPath, 'utf8');
 const rows = data.split('\n').slice(1); // Skip header row
 
 // Parse dataset
@@ -25,7 +28,7 @@ const gain = 0.9;
 const riskMultiplier = 2;
 
 // Write header to output file
-fs.writeFileSync(        '/home/main/Documents/GitHub/MEM-Trading/splitmartin/backtesting/singlebacktest.csv',  'date,price,sma,trend,risk,balance\n');
+fs.writeFileSync(outputPath,  'date,price,sma,trend,risk,balance\n');
 
 // Main backtesting loop
 priceData.forEach((row, i) => {
@@ -67,8 +70,7 @@ priceData.forEach((row, i) => {
 
     // Output to CSV
     fs.appendFileSync(
-        '/home/main/Documents/GitHub/MEM-Trading/splitmartin/backtesting/singlebacktest.csv', 
-        `${snapped_at},${price},${sma},${trend},${risk},${balance}\n`
+        outputPath, `${snapped_at},${price},${sma},${trend},${risk},${balance}\n`
     );
 });
 
