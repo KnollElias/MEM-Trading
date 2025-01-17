@@ -4,7 +4,7 @@
 
 const fs = require('fs');
 
-const inputPath = "/home/main/Documents/GitHub/MEM-Trading/splitmartin/btc-usd-edited-test.csv";
+const inputPath = "/home/main/Documents/GitHub/MEM-Trading/splitmartin/btc-usd-edited.csv";
 const outputPath = "/home/main/Desktop/singlebacktest.csv";
 
 // Load dataset
@@ -32,7 +32,7 @@ const gain = 0.9;
 const riskMultiplier = 2;
 
 // Write header to output file
-fs.writeFileSync(outputPath,  'date,price,sma,trend,risk,balance,trade\n');
+fs.writeFileSync(outputPath,  'date,price,sma,lastTrend,risk,balance\n');
 console.log("grüezi");
 
 // Main backtesting loop
@@ -43,66 +43,30 @@ priceData.forEach((row, i) => {
 
     // get trend
     let lastTrend = 0;
-    if (priceData[i - 1]?.price >= priceData[i - 1]?.sma) {
+    if (lastPrice >= lastSma) {
         lastTrend = 1;
     } else {
         lastTrend = -1;
     }
-console.log(`${i},${price},${sma},${lastTrend},${risk},${balance}`)
+
     // get outcome
     if (lastTrend !== 0) { // uptrend
         if (lastTrend === 1 && price > lastPrice || lastTrend === -1 && price < lastPrice)
-        {
-            // won action
-            console.warn("won")
+        {   // won action
+            risk = riskInitial;
+            balance += risk * gain;
         } else { // downtrend
             // lost action
-            console.error("lost")
+            balance -= risk * gain;
+            risk = (risk + 1);
         }
-    
     }
 
-
-    
-
-
-    // Determine trend and outcome
-    let winThisRound = false;
-
-    if (price > sma) {
-        trend = 'bullish';
-        winThisRound = (price > priceData[i - 1]?.price); // Price increased
-    } else if (price < sma) {
-        trend = 'bearish';
-        winThisRound = (price < priceData[i - 1]?.price); // Price decreased
-    } else {
-        trend = 'neutral';
-        winThisRound = (price > priceData[i - 1]?.price); // Default to bullish assumption
-    }
-
-    // Adjust risk based on last round outcome
-    if (balance < balanceLastRound) {
-        risk *= riskMultiplier; // Increase risk on loss
-    } else {
-        risk = riskInitial; // Reset risk on win
-    }
-
-    // Update balance
-    if (winThisRound) {
-        balance += risk * gain;
-        risk = riskInitial;
-    } else {
-        balance -= risk * loss;
-        risk = (risk * 2);
-    }
-
-    // Record balance for next round comparison
-    balanceLastRound = balance;
-
+console.log(lastTrend, risk, balance)
     // Output to CSV
-    // fs.appendFileSync(
-    //     outputPath, `${snapped_at},${price},${sma},${trend},${risk},${balance}\n`
-    // );
+    fs.appendFileSync(
+        outputPath, `${snapped_at},${price},${sma},${lastTrend},${risk},${balance}\n`
+    );
 });
 
 console.log('Backtest complete. Results saved to backtest.csv');
