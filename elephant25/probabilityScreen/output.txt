@@ -1,0 +1,38 @@
+│ (index)     │ Values     │
+├─────────────┼────────────┤
+│ Total Tries │ 2552793587 │
+│ Level 1     │ 638164485  │
+│ Level 2     │ 319133585  │
+│ Level 3     │ 159550340  │
+│ Level 4     │ 79777413   │
+│ Level 5     │ 39885676   │
+│ Level 6     │ 19944615   │
+│ Level 7     │ 9970062    │
+│ Level 8     │ 4983953    │
+│ Level 9     │ 2491076    │
+│ Level 10    │ 1246783    │
+│ Level 11    │ 623761     │
+│ Level 12    │ 312101     │
+│ Level 13    │ 156311     │
+│ Level 14    │ 77694      │
+│ Level 15    │ 38519      │
+│ Level 16    │ 19532      │
+│ Level 17    │ 9761       │
+│ Level 18    │ 4918       │
+│ Level 19    │ 2439       │
+│ Level 20    │ 1167       │
+│ Level 21    │ 577        │
+│ Level 22    │ 324        │
+│ Level 23    │ 151        │
+│ Level 24    │ 72         │
+│ Level 25    │ 28         │
+│ Level 26    │ 17         │
+│ Level 27    │ 12         │
+│ Level 28    │ 4          │
+│ Level 29    │ 0          │
+│ Level 30    │ 2          │
+│ Level 31    │ 2          │
+│ Level 32    │ 0          │
+│ Level 33    │ 1          │
+│ Level 34    │ 0          │
+│ Level 35    │ 0  
