@@ -1,52 +1,55 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #0c0d0f;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-
-  .container {
-    padding: 10%;
-    background-color: #2f333a;
-
-    .item {
-      .free {
-        background-color: green;
-      }
-      .used {
-        background-color: red;
-      }
-    }
-  }
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  display: flex;
+  flex-direction: row; /* Arrange nodes horizontally */
+  flex-wrap: wrap; /* Wrap to the next line when there's no space */
+  gap: 20px; /* Add spacing between nodes */
+  padding: 20px;
+  background-color: #2f333a;
+  justify-content: center; /* Center nodes in the container */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.item {
+  display: flex;
+  flex-direction: column; /* Stack risk levels vertically within each node */
+  align-items: flex-start; /* Align items to the left */
+  gap: 10px; /* Add spacing between risk levels */
+  padding: 10px;
+  background-color: #444;
+  border-radius: 5px;
+  min-width: 150px; /* Set a minimum width for consistency */
+}
+
+.dash {
+  display: flex;
+  flex-direction: column; /* Stack risk levels vertically within each node */
+  align-items: flex-start; /* Align items to the left */
+  gap: 10px; /* Add spacing between risk levels */
+  padding: 10px;
+  background-color: #444;
+  border-radius: 5px;
+  width: 100%; /* Set a minimum width for consistency */
+}
+
+.free {
+  background-color: green;
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.used {
+  background-color: red;
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
 }
