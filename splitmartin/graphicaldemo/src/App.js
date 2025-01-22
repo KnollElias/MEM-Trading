@@ -9,7 +9,6 @@ function App() {
   const [scales, setScales] = useState([]);
   const [currentNode, setCurrentNode] = useState(1); // Tracks the current node
   const [lastOutcome, setLastOutcome] = useState(null); // Stores the last outcome (win/loss)
-  const [nextOutcome, setNextOutcome] = useState(null); // Stores the next outcome (win/loss)
   const [balance, setBalance] = useState(0); // Tracks the total balance
   const [unrealizedLoss, setUnrealizedLoss] = useState(0); // Tracks unrealized loss
 
@@ -26,6 +25,8 @@ function App() {
       unrealizedLoss: 0,
     }));
     setScales(newScales);
+    setUnrealizedLoss(0); // Reset unrealized loss
+    setBalance(0); // Reset balance
   };
 
   const calculateUnrealizedLoss = () => {
@@ -40,11 +41,15 @@ function App() {
       prevScales.map((scale) => {
         if (scale.index === nodeIndex) {
           if (won) {
-            // Reset the state and unrealized loss on a win
-            setBalance((prevBalance) => prevBalance + StartingInvestment * (2 ** scale.state));
+            // On win, reset state and unrealized loss
+            const profit = StartingInvestment * (2 ** scale.state);
+            setBalance((prevBalance) => prevBalance + profit);
             return { ...scale, state: 0, unrealizedLoss: 0 };
           } else {
-            // Increment state and update unrealized loss on a loss
+            // On loss, calculate loss and increment state
+            const lostAmount = StartingInvestment * (2 ** scale.state);
+            setBalance((prevBalance) => prevBalance - lostAmount);
+
             const newState = scale.state + 1;
             const newUnrealizedLoss = StartingInvestment * (2 ** newState - 1);
             return { ...scale, state: newState, unrealizedLoss: newUnrealizedLoss };
@@ -59,12 +64,11 @@ function App() {
     const currentScale = currentNode;
     const outcome = Math.random() < 0.5; // 50% chance of win/loss
     setLastOutcome(outcome ? "Win" : "Loss");
-    setNextOutcome(outcome ? "Loss" : "Win");
 
     // Update the current node
     updateNode(currentScale, outcome);
 
-    // Update the unrealized loss
+    // Dynamically update the unrealized loss
     setUnrealizedLoss(calculateUnrealizedLoss());
 
     // Move to the next node, wrapping around
@@ -89,8 +93,6 @@ function App() {
     ));
   };
 
-// balance calculation are not right soemhow it is to much or just upright calculated the wrong way
-
   return (
     <div className="App">
       <header className="App-header">
@@ -99,10 +101,9 @@ function App() {
             <h2>Dashboard</h2>
             <div>Current Working Node: {currentNode}</div>
             <div>Last Outcome: {lastOutcome}</div>
-            {/* <div>Next Outcome: {nextOutcome}</div> */}
             <div>Balance: {balance}</div>
             <div>Unrealized Loss: {unrealizedLoss}</div>
-            <div>Profit: {balance-unrealizedLoss}</div>
+            <div>Profit: {balance - unrealizedLoss}</div>
             <button onClick={handleNext}>Next</button>
           </div>
           {plotScales(scales)}
