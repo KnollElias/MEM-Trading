@@ -37,6 +37,13 @@ function App() {
     }, 0);
   };
 
+  const calculateDashboardProfit = () => {
+    return (
+      balance + scales.reduce((total, scale) => total + scale.profit, 0) - 100 // Starting balance
+    );
+  };
+  
+
   const updateNode = (nodeIndex, won) => {
     let balanceUpdate = 0; // Temporary variable for balance change
   
@@ -52,16 +59,18 @@ function App() {
               return { ...scale, state: 0, unrealizedLoss: 0, profit: nodeProfit }; // Reset state
             } else {
               balanceUpdate -= StartingInvestment; // Loss: Subtract 1
+              nodeProfit -= StartingInvestment; // Update node profit for the loss
               return { ...scale, state: 1, unrealizedLoss: StartingInvestment, profit: nodeProfit }; // Move to state 1
             }
   
           case 1: // State 1: Recover first loss
             if (won) {
               balanceUpdate += StartingInvestment * 2; // Win: Recover + profit
-              nodeProfit += StartingInvestment * 2; // Update node profit
+              nodeProfit += StartingInvestment; // Recover previous loss + profit
               return { ...scale, state: 0, unrealizedLoss: 0, profit: nodeProfit }; // Reset state
             } else {
               balanceUpdate -= StartingInvestment * 2; // Loss: Subtract 2
+              nodeProfit -= StartingInvestment * 2; // Update node profit for the loss
               return {
                 ...scale,
                 state: 2,
@@ -73,10 +82,11 @@ function App() {
           case 2: // State 2: Recover losses from state 1 and state 0
             if (won) {
               balanceUpdate += StartingInvestment * 4; // Win: Recover + profit
-              nodeProfit += StartingInvestment * 4; // Update node profit
+              nodeProfit += StartingInvestment; // Recover all losses + profit
               return { ...scale, state: 0, unrealizedLoss: 0, profit: nodeProfit }; // Reset state
             } else {
               balanceUpdate -= StartingInvestment * 4; // Loss: Subtract 4
+              nodeProfit -= StartingInvestment * 4; // Update node profit for the loss
               return {
                 ...scale,
                 state: 3,
@@ -89,11 +99,12 @@ function App() {
             if (won) {
               const winAmount = StartingInvestment * (2 ** scale.state);
               balanceUpdate += winAmount; // Win: Recover + profit
-              nodeProfit += winAmount; // Update node profit
+              nodeProfit += StartingInvestment; // Recover all losses + profit
               return { ...scale, state: 0, unrealizedLoss: 0, profit: nodeProfit }; // Reset state
             } else {
               const lossAmount = StartingInvestment * (2 ** scale.state);
               balanceUpdate -= lossAmount; // Loss: Subtract loss
+              nodeProfit -= lossAmount; // Update node profit for the loss
               return {
                 ...scale,
                 state: scale.state + 1,
@@ -110,22 +121,22 @@ function App() {
     setScales(updatedScales);
     setBalance((prevBalance) => prevBalance + balanceUpdate); // Update balance
   };
-  
+    
   const handleNext = () => {
     const currentScale = currentNode;
     const outcome = Math.random() < 0.5; // 50% chance of win/loss
     setLastOutcome(outcome ? 'Win' : 'Loss');
-
+  
     // Update the current node
     updateNode(currentScale, outcome);
-
+  
     // Dynamically update the unrealized loss
     setUnrealizedLoss(calculateUnrealizedLoss());
-
+  
     // Move to the next node, wrapping around
     setCurrentNode((prevNode) => (prevNode % NodeCount) + 1);
   };
-
+  
   const plotScales = (scales) => {
     return scales.map((scale, scaleIndex) => (
       <div key={scaleIndex} className="item">
@@ -138,10 +149,11 @@ function App() {
             {riskLevel > (scale.state - 1) ? `Ok` : 'Risk'}
           </div>
         ))}
-        <div>Profit: {scale.profit}</div> {/* Display node-specific profit */}
+        <div>Profit: {scale.profit >= 0 ? scale.profit : `-${Math.abs(scale.profit)}`}</div> {/* Display node-specific profit */}
       </div>
     ));
   };
+  
 
   return (
     <div className="App">
@@ -153,7 +165,7 @@ function App() {
             <div>Last Outcome: {lastOutcome}</div>
             <div>Balance: {balance}</div>
             <div>Unrealized Loss: {unrealizedLoss}</div>
-            <div>Profit: {balance - unrealizedLoss - 100}</div>
+            <div>Profit: {calculateDashboardProfit()}</div>
             <button onClick={handleNext}>Next</button>
           </div>
           {plotScales(scales)}
