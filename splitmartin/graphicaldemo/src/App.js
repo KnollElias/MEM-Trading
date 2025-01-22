@@ -1,15 +1,15 @@
 import './App.css';
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 function App() {
-  const PontLength = 3; // How many times one node can fail
+  const PontLength = 7; // How many times one node can fail
   const NodeCount = 16; // How many different Scales there are
   const StartingInvestment = 1; // Base investment amount
 
   const [scales, setScales] = useState([]);
   const [currentNode, setCurrentNode] = useState(1); // Tracks the current node
   const [lastOutcome, setLastOutcome] = useState(null); // Stores the last outcome (win/loss)
-  const [balance, setBalance] = useState(0); // Tracks the total balance
+  const [balance, setBalance] = useState(100); // Tracks the total balance
   const [unrealizedLoss, setUnrealizedLoss] = useState(0); // Tracks unrealized loss
 
   // Initialize scales on component mount
@@ -23,10 +23,11 @@ function App() {
       size: PontLength,
       state: 0, // Default state
       unrealizedLoss: 0,
+      profit: 0, // Track profit for this node
     }));
     setScales(newScales);
     setUnrealizedLoss(0); // Reset unrealized loss
-    setBalance(0); // Reset balance
+    setBalance(100); // Reset balance
   };
 
   const calculateUnrealizedLoss = () => {
@@ -37,33 +38,83 @@ function App() {
   };
 
   const updateNode = (nodeIndex, won) => {
-    setScales((prevScales) =>
-      prevScales.map((scale) => {
-        if (scale.index === nodeIndex) {
-          if (won) {
-            // On win, reset state and unrealized loss
-            const profit = StartingInvestment * (2 ** scale.state);
-            setBalance((prevBalance) => prevBalance + profit);
-            return { ...scale, state: 0, unrealizedLoss: 0 };
-          } else {
-            // On loss, calculate loss and increment state
-            const lostAmount = StartingInvestment * (2 ** scale.state);
-            setBalance((prevBalance) => prevBalance - lostAmount);
-
-            const newState = scale.state + 1;
-            const newUnrealizedLoss = StartingInvestment * (2 ** newState - 1);
-            return { ...scale, state: newState, unrealizedLoss: newUnrealizedLoss };
-          }
+    let balanceUpdate = 0; // Temporary variable for balance change
+  
+    const updatedScales = scales.map((scale) => {
+      if (scale.index === nodeIndex) {
+        let nodeProfit = scale.profit; // Current node profit
+  
+        switch (scale.state) {
+          case 0: // State 0: First trade
+            if (won) {
+              balanceUpdate += StartingInvestment; // Win: Add 1
+              nodeProfit += StartingInvestment; // Update node profit
+              return { ...scale, state: 0, unrealizedLoss: 0, profit: nodeProfit }; // Reset state
+            } else {
+              balanceUpdate -= StartingInvestment; // Loss: Subtract 1
+              return { ...scale, state: 1, unrealizedLoss: StartingInvestment, profit: nodeProfit }; // Move to state 1
+            }
+  
+          case 1: // State 1: Recover first loss
+            if (won) {
+              balanceUpdate += StartingInvestment * 2; // Win: Recover + profit
+              nodeProfit += StartingInvestment * 2; // Update node profit
+              return { ...scale, state: 0, unrealizedLoss: 0, profit: nodeProfit }; // Reset state
+            } else {
+              balanceUpdate -= StartingInvestment * 2; // Loss: Subtract 2
+              return {
+                ...scale,
+                state: 2,
+                unrealizedLoss: StartingInvestment * 3, // Total unrealized loss: 1+2=3
+                profit: nodeProfit,
+              }; // Move to state 2
+            }
+  
+          case 2: // State 2: Recover losses from state 1 and state 0
+            if (won) {
+              balanceUpdate += StartingInvestment * 4; // Win: Recover + profit
+              nodeProfit += StartingInvestment * 4; // Update node profit
+              return { ...scale, state: 0, unrealizedLoss: 0, profit: nodeProfit }; // Reset state
+            } else {
+              balanceUpdate -= StartingInvestment * 4; // Loss: Subtract 4
+              return {
+                ...scale,
+                state: 3,
+                unrealizedLoss: StartingInvestment * 7, // Total unrealized loss: 1+2+4=7
+                profit: nodeProfit,
+              }; // Move to state 3
+            }
+  
+          default: // State 3 or higher: Continue doubling
+            if (won) {
+              const winAmount = StartingInvestment * (2 ** scale.state);
+              balanceUpdate += winAmount; // Win: Recover + profit
+              nodeProfit += winAmount; // Update node profit
+              return { ...scale, state: 0, unrealizedLoss: 0, profit: nodeProfit }; // Reset state
+            } else {
+              const lossAmount = StartingInvestment * (2 ** scale.state);
+              balanceUpdate -= lossAmount; // Loss: Subtract loss
+              return {
+                ...scale,
+                state: scale.state + 1,
+                unrealizedLoss: StartingInvestment * ((2 ** (scale.state + 1)) - 1), // Update unrealized loss
+                profit: nodeProfit,
+              }; // Move to next state
+            }
         }
-        return scale;
-      })
-    );
+      }
+      return scale; // No change for other nodes
+    });
+  
+    // Apply the changes to the state
+    setScales(updatedScales);
+    setBalance((prevBalance) => prevBalance + balanceUpdate); // Update balance
   };
-
+  
   const handleNext = () => {
     const currentScale = currentNode;
     const outcome = Math.random() < 0.5; // 50% chance of win/loss
-    setLastOutcome(outcome ? "Win" : "Loss");
+    setLastOutcome(outcome ? 'Win' : 'Loss');
 
     // Update the current node
     updateNode(currentScale, outcome);
@@ -78,17 +129,16 @@ function App() {
   const plotScales = (scales) => {
     return scales.map((scale, scaleIndex) => (
       <div key={scaleIndex} className="item">
-        <div>
-          Node: {scale.index}
-        </div>
+        <div>Node: {scale.index}</div>
         {Array.from({ length: scale.size }).map((_, riskLevel) => (
           <div
             key={riskLevel}
             className={`${riskLevel > (scale.state - 1) ? 'free' : 'used'}`}
           >
-            {riskLevel > (scale.state - 1) ? `Ok` : "Risk"}
+            {riskLevel > (scale.state - 1) ? `Ok` : 'Risk'}
           </div>
         ))}
+        <div>Profit: {scale.profit}</div> {/* Display node-specific profit */}
       </div>
     ));
   };
@@ -103,7 +153,7 @@ function App() {
             <div>Last Outcome: {lastOutcome}</div>
             <div>Balance: {balance}</div>
             <div>Unrealized Loss: {unrealizedLoss}</div>
-            <div>Profit: {balance - unrealizedLoss}</div>
+            <div>Profit: {balance - unrealizedLoss - 100}</div>
             <button onClick={handleNext}>Next</button>
           </div>
           {plotScales(scales)}
