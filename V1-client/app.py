@@ -1,7 +1,7 @@
 from modules.logger import log
-from modules.statefile import create_statefile
+from modules.statefile import create_statefile, show_statefile
 
-create_statefile()
+show_statefile()
 log("test")
 
 # read statefile

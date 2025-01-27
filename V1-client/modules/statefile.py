@@ -18,3 +18,21 @@ def create_statefile(filepath=None, balance=500.0, nodes=None):
     with open(filepath, 'w') as f:
         json.dump(state, f, indent=4)
 
+def show_statefile(filepath=None):
+    if filepath is None:
+        filepath = "./statefile.json"
+    
+    if not os.path.exists(filepath):
+        print(f"No state file found at {filepath}")
+        return
+    
+    with open(filepath, 'r') as f:
+        state = json.load(f)
+    
+    print("Balance:", state["balance"])
+    print("Nodes:")
+    for node in state["nodes"]:
+        print(f"  Node {node['index']}:")
+        print(f"    Scale Count: {node['scalecount']}")
+        print(f"    State: {node['state']}")
+        print(f"    Scales: {node['scales']}")
