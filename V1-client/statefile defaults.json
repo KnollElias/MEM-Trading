@@ -10,7 +10,7 @@
             "index": 1,
             "scale_count": 5,
             "state": 0,
-            "scales": [
+            "scale": [
                 0,
                 0,
                 0,
@@ -24,7 +24,7 @@
             "index": 2,
             "scale_count": 5,
             "state": 0,
-            "scales": [
+            "scale": [
                 0,
                 0,
                 0,
@@ -38,7 +38,7 @@
             "index": 3,
             "scale_count": 5,
             "state": 0,
-            "scales": [
+            "scale": [
                 0,
                 0,
                 0,
@@ -52,7 +52,7 @@
             "index": 4,
             "scale_count": 5,
             "state": 0,
-            "scales": [
+            "scale": [
                 0,
                 0,
                 0,
@@ -66,7 +66,7 @@
             "index": 5,
             "scale_count": 5,
             "state": 0,
-            "scales": [
+            "scale": [
                 0,
                 0,
                 0,

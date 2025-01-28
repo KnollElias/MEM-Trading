@@ -6,7 +6,7 @@ defaultfilepath = "./statefile.json"
 # def create_statefile(filepath=None, balance=500.0, nodes=None):
 #     if nodes is None:
 #         nodes = [
-#             {"index": 1, "scalecount": 5, "state": 0, "scales": [0, 0, 0, 0, 0]}
+#             {"index": 1, "scalecount": 5, "state": 0, "scale": [0, 0, 0, 0, 0]}
 #         ]
     
 #     if filepath is None:
