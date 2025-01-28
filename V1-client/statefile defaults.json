@@ -8,7 +8,7 @@
     "nodes": [
         {
             "index": 1,
-            "scale_count": 5,
+            "current_risk": 1,
             "state": 0,
             "scale": [
                 0,
@@ -22,7 +22,7 @@
         },
         {
             "index": 2,
-            "scale_count": 5,
+            "current_risk": 1,
             "state": 0,
             "scale": [
                 0,
@@ -36,7 +36,7 @@
         },
         {
             "index": 3,
-            "scale_count": 5,
+            "current_risk": 1,
             "state": 0,
             "scale": [
                 0,
@@ -50,7 +50,7 @@
         },
         {
             "index": 4,
-            "scale_count": 5,
+            "current_risk": 1,
             "state": 0,
             "scale": [
                 0,
@@ -64,7 +64,7 @@
         },
         {
             "index": 5,
-            "scale_count": 5,
+            "current_risk": 1,
             "state": 0,
             "scale": [
                 0,
