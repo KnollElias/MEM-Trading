@@ -1,10 +1,10 @@
 from modules.logger import log
-from modules.statefile import show_statefile, read_statefile, write_statefile
+from modules.statefile import read_statefile, write_statefile
 from modules.trader import open_new_trade
 from modules.messanger import notify_message
 
 def read_outcome():
-    return False
+    return True
 
 def increment_nodes(currentnode, statefile):
     # make the last the current
@@ -41,19 +41,23 @@ def iteration():
     lastnode = statefile["last_node"]
     balance = statefile["balance"]
 
+    log(f"Sucessfully read statefile at age: {statefile['age']}")
     increment_nodes(currentnode, statefile)
     
     if lastoutcome:
+        log("Won last trade.")
         reset_scale(currentnode, statefile)
         statefile["nodes"][currentnode]["state"] = 0
 
         write_statefile("nodes", statefile["nodes"])
     if lastoutcome == False:
+        log("Lost last trade.")
         statefile["nodes"][currentnode]["state"] += 1
         statefile["nodes"][currentnode]["scale"] = brew_scale(statefile["nodes"][currentnode]["scale"], statefile["nodes"][currentnode]["state"])
 
         write_statefile("nodes", statefile["nodes"])
 
+    log(f"Sucessfully updated the statfile at age: {statefile['age']}")
     # open_new_trade(read_statefile()) # read statefile again after updates
     # notify_message(read_statefile()) # put the data to a discord chat for info
 iteration()
