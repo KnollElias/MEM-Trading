@@ -1,7 +1,7 @@
 {
     "age": 0,
     "initial_risk": 1,
-    "balance": 510.0,
+    "balance": 500.0,
     "real_balance": 0.0,
     "current_node": 0,
     "last_node": -1,

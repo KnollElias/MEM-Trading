@@ -2,6 +2,7 @@ from modules.logger import log
 from modules.statefile import read_statefile, write_statefile
 from modules.trader import open_new_trade
 from modules.messanger import notify_message
+from modules.backtester import trade_outcome
 
 def read_outcome():
     return True
@@ -32,16 +33,21 @@ def brew_scale(oldscale, newstate):
         oldscale[position] = risk
         return oldscale
 
+def backtest(age):
+    print("Backtesting... : age", age)
+    return trade_outcome("/home/main/Documents/GitHub/MEM-Trading/V1-client/testing/goldprice/2024/dataset_2024.csv", age+1)
+
 def iteration():
-    lastoutcome = read_outcome() # bool
+    # lastoutcome = read_outcome() # bool
     statefile = read_statefile() # json
+    lastoutcome = backtest(statefile["age"])
 
     initialrisk = statefile["initial_risk"]
     currentnode = statefile["current_node"]
     lastnode = statefile["last_node"]
     balance = statefile["balance"]
 
-    log(f"Sucessfully read statefile at age: {statefile['age']}")
+    log(f"Sucessfully read statefile at age: {statefile['age']}, {lastoutcome}")
     increment_nodes(currentnode, statefile)
     
     if lastoutcome:
