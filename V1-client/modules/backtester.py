@@ -10,10 +10,10 @@ def trade_outcome(csv_path, index):
         
         trade = rows[index - 1]
         change_percent = float(trade['Change %'].strip('%'))
-        open_price = float(trade['Open'])
-        close_price = float(trade['Price'])
+        # open_price = float(trade['Open'])
+        # close_price = float(trade['Price'])
         
-        if change_percent > 0.1 or (open_price - close_price) / close_price > 0.001:
+        if change_percent > 0.01: # or (open_price - close_price) / close_price > 0.001:
             return True
         else:
             return False

@@ -32,6 +32,13 @@ def brew_scale(oldscale, newstate):
         risk = 2 ** (newstate - 1)
         oldscale[position] = risk
         return oldscale
+    
+def calculate_next_risk(newstate):
+    if newstate == 1:
+        return 1
+    if newstate >= 2:
+        risk = (2 ** (newstate - 1))*2
+        return risk
 
 def backtest(age):
     print("Backtesting... : age", age)
@@ -40,7 +47,7 @@ def backtest(age):
 def iteration():
     # lastoutcome = read_outcome() # bool
     statefile = read_statefile() # json
-    lastoutcome = backtest(statefile["age"])
+    lastoutcome = False # backtest(statefile["age"])
 
     initialrisk = statefile["initial_risk"]
     currentnode = statefile["current_node"]
@@ -51,13 +58,20 @@ def iteration():
     increment_nodes(currentnode, statefile)
     
     if lastoutcome:
-        log("Won last trade.")
+        log(f"Won last trade. {statefile["age"]+2}")
+        if statefile["nodes"][currentnode]["state"] == 0:
+            balance += initialrisk
+        if statefile["nodes"][currentnode]["state"] >= 1:
+            print("THe index is: ", )
+            balance += calculate_next_risk(statefile["nodes"][currentnode]["state"])
         reset_scale(currentnode, statefile)
         statefile["nodes"][currentnode]["state"] = 0
 
         write_statefile("nodes", statefile["nodes"])
+        print("Balance is: ", balance)
+        write_statefile("balance", balance)
     if lastoutcome == False:
-        log("Lost last trade.")
+        log(f"Lost last trade. {statefile["age"]+2}")
         statefile["nodes"][currentnode]["state"] += 1
         statefile["nodes"][currentnode]["scale"] = brew_scale(statefile["nodes"][currentnode]["scale"], statefile["nodes"][currentnode]["state"])
 

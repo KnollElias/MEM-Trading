@@ -1,0 +1,927 @@
+Sucessfully read statefile at age: 0, True
+Won last trade. 2
+Sucessfully updated the statfile at age: 0
+Sucessfully read statefile at age: 1, False
+Lost last trade. 3
+Sucessfully updated the statfile at age: 1
+Sucessfully read statefile at age: 2, True
+Won last trade. 4
+Sucessfully updated the statfile at age: 2
+Sucessfully read statefile at age: 3, False
+Lost last trade. 5
+Sucessfully updated the statfile at age: 3
+Sucessfully read statefile at age: 4, False
+Lost last trade. 6
+Sucessfully updated the statfile at age: 4
+Sucessfully read statefile at age: 5, False
+Lost last trade. 7
+Sucessfully updated the statfile at age: 5
+Sucessfully read statefile at age: 6, False
+Lost last trade. 8
+Sucessfully updated the statfile at age: 6
+Sucessfully read statefile at age: 7, False
+Lost last trade. 9
+Sucessfully updated the statfile at age: 7
+Sucessfully read statefile at age: 8, True
+Won last trade. 10
+Sucessfully updated the statfile at age: 8
+Sucessfully read statefile at age: 9, False
+Lost last trade. 11
+Sucessfully updated the statfile at age: 9
+Sucessfully read statefile at age: 10, False
+Lost last trade. 12
+Sucessfully updated the statfile at age: 10
+Sucessfully read statefile at age: 11, False
+Lost last trade. 13
+Sucessfully updated the statfile at age: 11
+Sucessfully read statefile at age: 12, True
+Won last trade. 14
+Sucessfully updated the statfile at age: 12
+Sucessfully read statefile at age: 13, True
+Won last trade. 15
+Sucessfully updated the statfile at age: 13
+Sucessfully read statefile at age: 14, False
+Lost last trade. 16
+Sucessfully updated the statfile at age: 14
+Sucessfully read statefile at age: 15, True
+Won last trade. 17
+Sucessfully updated the statfile at age: 15
+Sucessfully read statefile at age: 16, False
+Lost last trade. 18
+Sucessfully updated the statfile at age: 16
+Sucessfully read statefile at age: 17, True
+Won last trade. 19
+Sucessfully updated the statfile at age: 17
+Sucessfully read statefile at age: 18, False
+Lost last trade. 20
+Sucessfully updated the statfile at age: 18
+Sucessfully read statefile at age: 19, True
+Won last trade. 21
+Sucessfully updated the statfile at age: 19
+Sucessfully read statefile at age: 20, True
+Won last trade. 22
+Sucessfully updated the statfile at age: 20
+Sucessfully read statefile at age: 21, True
+Won last trade. 23
+Sucessfully updated the statfile at age: 21
+Sucessfully read statefile at age: 22, True
+Won last trade. 24
+Sucessfully updated the statfile at age: 22
+Sucessfully read statefile at age: 23, False
+Lost last trade. 25
+Sucessfully updated the statfile at age: 23
+Sucessfully read statefile at age: 24, False
+Lost last trade. 26
+Sucessfully updated the statfile at age: 24
+Sucessfully read statefile at age: 25, True
+Won last trade. 27
+Sucessfully updated the statfile at age: 25
+Sucessfully read statefile at age: 26, False
+Lost last trade. 28
+Sucessfully updated the statfile at age: 26
+Sucessfully read statefile at age: 27, False
+Lost last trade. 29
+Sucessfully updated the statfile at age: 27
+Sucessfully read statefile at age: 28, False
+Lost last trade. 30
+Sucessfully updated the statfile at age: 28
+Sucessfully read statefile at age: 29, False
+Lost last trade. 31
+Sucessfully updated the statfile at age: 29
+Sucessfully read statefile at age: 30, False
+Lost last trade. 32
+Sucessfully updated the statfile at age: 30
+Sucessfully read statefile at age: 31, False
+Lost last trade. 33
+Sucessfully updated the statfile at age: 31
+Sucessfully read statefile at age: 32, True
+Won last trade. 34
+Sucessfully updated the statfile at age: 32
+Sucessfully read statefile at age: 33, True
+Won last trade. 35
+Sucessfully updated the statfile at age: 33
+Sucessfully read statefile at age: 34, True
+Won last trade. 36
+Sucessfully updated the statfile at age: 34
+Sucessfully read statefile at age: 35, False
+Lost last trade. 37
+Sucessfully updated the statfile at age: 35
+Sucessfully read statefile at age: 36, False
+Lost last trade. 38
+Sucessfully updated the statfile at age: 36
+Sucessfully read statefile at age: 37, False
+Lost last trade. 39
+Sucessfully updated the statfile at age: 37
+Sucessfully read statefile at age: 38, True
+Won last trade. 40
+Sucessfully updated the statfile at age: 38
+Sucessfully read statefile at age: 39, False
+Lost last trade. 41
+Sucessfully updated the statfile at age: 39
+Sucessfully read statefile at age: 40, True
+Won last trade. 42
+Sucessfully updated the statfile at age: 40
+Sucessfully read statefile at age: 41, True
+Won last trade. 43
+Sucessfully updated the statfile at age: 41
+Sucessfully read statefile at age: 42, True
+Won last trade. 44
+Sucessfully updated the statfile at age: 42
+Sucessfully read statefile at age: 43, True
+Won last trade. 45
+Sucessfully updated the statfile at age: 43
+Sucessfully read statefile at age: 44, True
+Won last trade. 46
+Sucessfully updated the statfile at age: 44
+Sucessfully read statefile at age: 45, True
+Won last trade. 47
+Sucessfully updated the statfile at age: 45
+Sucessfully read statefile at age: 46, True
+Won last trade. 48
+Sucessfully updated the statfile at age: 46
+Sucessfully read statefile at age: 47, True
+Won last trade. 49
+Sucessfully updated the statfile at age: 47
+Sucessfully read statefile at age: 48, True
+Won last trade. 50
+Sucessfully updated the statfile at age: 48
+Sucessfully read statefile at age: 49, True
+Won last trade. 51
+Sucessfully updated the statfile at age: 49
+Sucessfully read statefile at age: 50, False
+Lost last trade. 52
+Sucessfully updated the statfile at age: 50
+Sucessfully read statefile at age: 51, True
+Won last trade. 53
+Sucessfully updated the statfile at age: 51
+Sucessfully read statefile at age: 52, False
+Lost last trade. 54
+Sucessfully updated the statfile at age: 52
+Sucessfully read statefile at age: 53, False
+Lost last trade. 55
+Sucessfully updated the statfile at age: 53
+Sucessfully read statefile at age: 54, True
+Won last trade. 56
+Sucessfully updated the statfile at age: 54
+Sucessfully read statefile at age: 55, False
+Lost last trade. 57
+Sucessfully updated the statfile at age: 55
+Sucessfully read statefile at age: 56, True
+Won last trade. 58
+Sucessfully updated the statfile at age: 56
+Sucessfully read statefile at age: 57, True
+Won last trade. 59
+Sucessfully updated the statfile at age: 57
+Sucessfully read statefile at age: 58, False
+Lost last trade. 60
+Sucessfully updated the statfile at age: 58
+Sucessfully read statefile at age: 59, True
+Won last trade. 61
+Sucessfully updated the statfile at age: 59
+Sucessfully read statefile at age: 60, True
+Won last trade. 62
+Sucessfully updated the statfile at age: 60
+Sucessfully read statefile at age: 61, True
+Won last trade. 63
+Sucessfully updated the statfile at age: 61
+Sucessfully read statefile at age: 62, True
+Won last trade. 64
+Sucessfully updated the statfile at age: 62
+Sucessfully read statefile at age: 63, True
+Won last trade. 65
+Sucessfully updated the statfile at age: 63
+Sucessfully read statefile at age: 64, True
+Won last trade. 66
+Sucessfully updated the statfile at age: 64
+Sucessfully read statefile at age: 65, True
+Won last trade. 67
+Sucessfully updated the statfile at age: 65
+Sucessfully read statefile at age: 66, False
+Lost last trade. 68
+Sucessfully updated the statfile at age: 66
+Sucessfully read statefile at age: 67, True
+Won last trade. 69
+Sucessfully updated the statfile at age: 67
+Sucessfully read statefile at age: 68, True
+Won last trade. 70
+Sucessfully updated the statfile at age: 68
+Sucessfully read statefile at age: 69, True
+Won last trade. 71
+Sucessfully updated the statfile at age: 69
+Sucessfully read statefile at age: 70, False
+Lost last trade. 72
+Sucessfully updated the statfile at age: 70
+Sucessfully read statefile at age: 71, True
+Won last trade. 73
+Sucessfully updated the statfile at age: 71
+Sucessfully read statefile at age: 72, True
+Won last trade. 74
+Sucessfully updated the statfile at age: 72
+Sucessfully read statefile at age: 73, True
+Won last trade. 75
+Sucessfully updated the statfile at age: 73
+Sucessfully read statefile at age: 74, True
+Won last trade. 76
+Sucessfully updated the statfile at age: 74
+Sucessfully read statefile at age: 75, False
+Lost last trade. 77
+Sucessfully updated the statfile at age: 75
+Sucessfully read statefile at age: 76, True
+Won last trade. 78
+Sucessfully updated the statfile at age: 76
+Sucessfully read statefile at age: 77, True
+Won last trade. 79
+Sucessfully updated the statfile at age: 77
+Sucessfully read statefile at age: 78, False
+Lost last trade. 80
+Sucessfully updated the statfile at age: 78
+Sucessfully read statefile at age: 79, False
+Lost last trade. 81
+Sucessfully updated the statfile at age: 79
+Sucessfully read statefile at age: 80, False
+Lost last trade. 82
+Sucessfully updated the statfile at age: 80
+Sucessfully read statefile at age: 81, True
+Won last trade. 83
+Sucessfully updated the statfile at age: 81
+Sucessfully read statefile at age: 82, True
+Won last trade. 84
+Sucessfully updated the statfile at age: 82
+Sucessfully read statefile at age: 83, True
+Won last trade. 85
+Sucessfully updated the statfile at age: 83
+Sucessfully read statefile at age: 84, False
+Lost last trade. 86
+Sucessfully updated the statfile at age: 84
+Sucessfully read statefile at age: 85, True
+Won last trade. 87
+Sucessfully updated the statfile at age: 85
+Sucessfully read statefile at age: 86, False
+Lost last trade. 88
+Sucessfully updated the statfile at age: 86
+Sucessfully read statefile at age: 87, False
+Lost last trade. 89
+Sucessfully updated the statfile at age: 87
+Sucessfully read statefile at age: 88, True
+Won last trade. 90
+Sucessfully updated the statfile at age: 88
+Sucessfully read statefile at age: 89, False
+Lost last trade. 91
+Sucessfully updated the statfile at age: 89
+Sucessfully read statefile at age: 90, False
+Lost last trade. 92
+Sucessfully updated the statfile at age: 90
+Sucessfully read statefile at age: 91, True
+Won last trade. 93
+Sucessfully updated the statfile at age: 91
+Sucessfully read statefile at age: 92, True
+Won last trade. 94
+Sucessfully updated the statfile at age: 92
+Sucessfully read statefile at age: 93, False
+Lost last trade. 95
+Sucessfully updated the statfile at age: 93
+Sucessfully read statefile at age: 94, True
+Won last trade. 96
+Sucessfully updated the statfile at age: 94
+Sucessfully read statefile at age: 95, True
+Won last trade. 97
+Sucessfully updated the statfile at age: 95
+Sucessfully read statefile at age: 96, False
+Lost last trade. 98
+Sucessfully updated the statfile at age: 96
+Sucessfully read statefile at age: 97, True
+Won last trade. 99
+Sucessfully updated the statfile at age: 97
+Sucessfully read statefile at age: 98, True
+Won last trade. 100
+Sucessfully updated the statfile at age: 98
+Sucessfully read statefile at age: 99, False
+Lost last trade. 101
+Sucessfully updated the statfile at age: 99
+Sucessfully read statefile at age: 100, False
+Lost last trade. 102
+Sucessfully updated the statfile at age: 100
+Sucessfully read statefile at age: 101, False
+Lost last trade. 103
+Sucessfully updated the statfile at age: 101
+Sucessfully read statefile at age: 102, False
+Lost last trade. 104
+Sucessfully updated the statfile at age: 102
+Sucessfully read statefile at age: 103, True
+Won last trade. 105
+Sucessfully updated the statfile at age: 103
+Sucessfully read statefile at age: 104, False
+Lost last trade. 106
+Sucessfully updated the statfile at age: 104
+Sucessfully read statefile at age: 105, False
+Lost last trade. 107
+Sucessfully updated the statfile at age: 105
+Sucessfully read statefile at age: 106, True
+Won last trade. 108
+Sucessfully updated the statfile at age: 106
+Sucessfully read statefile at age: 107, False
+Lost last trade. 109
+Sucessfully updated the statfile at age: 107
+Sucessfully read statefile at age: 108, True
+Won last trade. 110
+Sucessfully updated the statfile at age: 108
+Sucessfully read statefile at age: 109, False
+Lost last trade. 111
+Sucessfully updated the statfile at age: 109
+Sucessfully read statefile at age: 110, True
+Won last trade. 112
+Sucessfully updated the statfile at age: 110
+Sucessfully read statefile at age: 111, True
+Won last trade. 113
+Sucessfully updated the statfile at age: 111
+Sucessfully read statefile at age: 112, False
+Lost last trade. 114
+Sucessfully updated the statfile at age: 112
+Sucessfully read statefile at age: 113, True
+Won last trade. 115
+Sucessfully updated the statfile at age: 113
+Sucessfully read statefile at age: 114, False
+Lost last trade. 116
+Sucessfully updated the statfile at age: 114
+Sucessfully read statefile at age: 115, True
+Won last trade. 117
+Sucessfully updated the statfile at age: 115
+Sucessfully read statefile at age: 116, False
+Lost last trade. 118
+Sucessfully updated the statfile at age: 116
+Sucessfully read statefile at age: 117, True
+Won last trade. 119
+Sucessfully updated the statfile at age: 117
+Sucessfully read statefile at age: 118, False
+Lost last trade. 120
+Sucessfully updated the statfile at age: 118
+Sucessfully read statefile at age: 119, True
+Won last trade. 121
+Sucessfully updated the statfile at age: 119
+Sucessfully read statefile at age: 120, True
+Won last trade. 122
+Sucessfully updated the statfile at age: 120
+Sucessfully read statefile at age: 121, True
+Won last trade. 123
+Sucessfully updated the statfile at age: 121
+Sucessfully read statefile at age: 122, False
+Lost last trade. 124
+Sucessfully updated the statfile at age: 122
+Sucessfully read statefile at age: 123, True
+Won last trade. 125
+Sucessfully updated the statfile at age: 123
+Sucessfully read statefile at age: 124, False
+Lost last trade. 126
+Sucessfully updated the statfile at age: 124
+Sucessfully read statefile at age: 125, False
+Lost last trade. 127
+Sucessfully updated the statfile at age: 125
+Sucessfully read statefile at age: 126, True
+Won last trade. 128
+Sucessfully updated the statfile at age: 126
+Sucessfully read statefile at age: 127, True
+Won last trade. 129
+Sucessfully updated the statfile at age: 127
+Sucessfully read statefile at age: 128, False
+Lost last trade. 130
+Sucessfully updated the statfile at age: 128
+Sucessfully read statefile at age: 129, False
+Lost last trade. 131
+Sucessfully updated the statfile at age: 129
+Sucessfully read statefile at age: 130, True
+Won last trade. 132
+Sucessfully updated the statfile at age: 130
+Sucessfully read statefile at age: 131, False
+Lost last trade. 133
+Sucessfully updated the statfile at age: 131
+Sucessfully read statefile at age: 132, True
+Won last trade. 134
+Sucessfully updated the statfile at age: 132
+Sucessfully read statefile at age: 133, False
+Lost last trade. 135
+Sucessfully updated the statfile at age: 133
+Sucessfully read statefile at age: 134, True
+Won last trade. 136
+Sucessfully updated the statfile at age: 134
+Sucessfully read statefile at age: 135, True
+Won last trade. 137
+Sucessfully updated the statfile at age: 135
+Sucessfully read statefile at age: 136, True
+Won last trade. 138
+Sucessfully updated the statfile at age: 136
+Sucessfully read statefile at age: 137, False
+Lost last trade. 139
+Sucessfully updated the statfile at age: 137
+Sucessfully read statefile at age: 138, True
+Won last trade. 140
+Sucessfully updated the statfile at age: 138
+Sucessfully read statefile at age: 139, True
+Won last trade. 141
+Sucessfully updated the statfile at age: 139
+Sucessfully read statefile at age: 140, False
+Lost last trade. 142
+Sucessfully updated the statfile at age: 140
+Sucessfully read statefile at age: 141, False
+Lost last trade. 143
+Sucessfully updated the statfile at age: 141
+Sucessfully read statefile at age: 142, False
+Lost last trade. 144
+Sucessfully updated the statfile at age: 142
+Sucessfully read statefile at age: 143, False
+Lost last trade. 145
+Sucessfully updated the statfile at age: 143
+Sucessfully read statefile at age: 144, True
+Won last trade. 146
+Sucessfully updated the statfile at age: 144
+Sucessfully read statefile at age: 145, True
+Won last trade. 147
+Sucessfully updated the statfile at age: 145
+Sucessfully read statefile at age: 146, False
+Lost last trade. 148
+Sucessfully updated the statfile at age: 146
+Sucessfully read statefile at age: 147, True
+Won last trade. 149
+Sucessfully updated the statfile at age: 147
+Sucessfully read statefile at age: 148, False
+Lost last trade. 150
+Sucessfully updated the statfile at age: 148
+Sucessfully read statefile at age: 149, True
+Won last trade. 151
+Sucessfully updated the statfile at age: 149
+Sucessfully read statefile at age: 150, True
+Won last trade. 152
+Sucessfully updated the statfile at age: 150
+Sucessfully read statefile at age: 151, True
+Won last trade. 153
+Sucessfully updated the statfile at age: 151
+Sucessfully read statefile at age: 152, False
+Lost last trade. 154
+Sucessfully updated the statfile at age: 152
+Sucessfully read statefile at age: 153, False
+Lost last trade. 155
+Sucessfully updated the statfile at age: 153
+Sucessfully read statefile at age: 154, False
+Lost last trade. 156
+Sucessfully updated the statfile at age: 154
+Sucessfully read statefile at age: 155, True
+Won last trade. 157
+Sucessfully updated the statfile at age: 155
+Sucessfully read statefile at age: 156, True
+Won last trade. 158
+Sucessfully updated the statfile at age: 156
+Sucessfully read statefile at age: 157, True
+Won last trade. 159
+Sucessfully updated the statfile at age: 157
+Sucessfully read statefile at age: 158, True
+Won last trade. 160
+Sucessfully updated the statfile at age: 158
+Sucessfully read statefile at age: 159, True
+Won last trade. 161
+Sucessfully updated the statfile at age: 159
+Sucessfully read statefile at age: 160, False
+Lost last trade. 162
+Sucessfully updated the statfile at age: 160
+Sucessfully read statefile at age: 161, True
+Won last trade. 163
+Sucessfully updated the statfile at age: 161
+Sucessfully read statefile at age: 162, True
+Won last trade. 164
+Sucessfully updated the statfile at age: 162
+Sucessfully read statefile at age: 163, True
+Won last trade. 165
+Sucessfully updated the statfile at age: 163
+Sucessfully read statefile at age: 164, True
+Won last trade. 166
+Sucessfully updated the statfile at age: 164
+Sucessfully read statefile at age: 165, False
+Lost last trade. 167
+Sucessfully updated the statfile at age: 165
+Sucessfully read statefile at age: 166, False
+Lost last trade. 168
+Sucessfully updated the statfile at age: 166
+Sucessfully read statefile at age: 167, True
+Won last trade. 169
+Sucessfully updated the statfile at age: 167
+Sucessfully read statefile at age: 168, True
+Won last trade. 170
+Sucessfully updated the statfile at age: 168
+Sucessfully read statefile at age: 169, False
+Lost last trade. 171
+Sucessfully updated the statfile at age: 169
+Sucessfully read statefile at age: 170, False
+Lost last trade. 172
+Sucessfully updated the statfile at age: 170
+Sucessfully read statefile at age: 171, True
+Won last trade. 173
+Sucessfully updated the statfile at age: 171
+Sucessfully read statefile at age: 172, False
+Lost last trade. 174
+Sucessfully updated the statfile at age: 172
+Sucessfully read statefile at age: 173, False
+Lost last trade. 175
+Sucessfully updated the statfile at age: 173
+Sucessfully read statefile at age: 174, True
+Won last trade. 176
+Sucessfully updated the statfile at age: 174
+Sucessfully read statefile at age: 175, True
+Won last trade. 177
+Sucessfully updated the statfile at age: 175
+Sucessfully read statefile at age: 176, False
+Lost last trade. 178
+Sucessfully updated the statfile at age: 176
+Sucessfully read statefile at age: 177, True
+Won last trade. 179
+Sucessfully updated the statfile at age: 177
+Sucessfully read statefile at age: 178, True
+Won last trade. 180
+Sucessfully updated the statfile at age: 178
+Sucessfully read statefile at age: 179, False
+Lost last trade. 181
+Sucessfully updated the statfile at age: 179
+Sucessfully read statefile at age: 180, True
+Won last trade. 182
+Sucessfully updated the statfile at age: 180
+Sucessfully read statefile at age: 181, True
+Won last trade. 183
+Sucessfully updated the statfile at age: 181
+Sucessfully read statefile at age: 182, False
+Lost last trade. 184
+Sucessfully updated the statfile at age: 182
+Sucessfully read statefile at age: 183, False
+Lost last trade. 185
+Sucessfully updated the statfile at age: 183
+Sucessfully read statefile at age: 184, True
+Won last trade. 186
+Sucessfully updated the statfile at age: 184
+Sucessfully read statefile at age: 185, True
+Won last trade. 187
+Sucessfully updated the statfile at age: 185
+Sucessfully read statefile at age: 186, True
+Won last trade. 188
+Sucessfully updated the statfile at age: 186
+Sucessfully read statefile at age: 187, True
+Won last trade. 189
+Sucessfully updated the statfile at age: 187
+Sucessfully read statefile at age: 188, True
+Won last trade. 190
+Sucessfully updated the statfile at age: 188
+Sucessfully read statefile at age: 189, True
+Won last trade. 191
+Sucessfully updated the statfile at age: 189
+Sucessfully read statefile at age: 190, True
+Won last trade. 192
+Sucessfully updated the statfile at age: 190
+Sucessfully read statefile at age: 191, False
+Lost last trade. 193
+Sucessfully updated the statfile at age: 191
+Sucessfully read statefile at age: 192, False
+Lost last trade. 194
+Sucessfully updated the statfile at age: 192
+Sucessfully read statefile at age: 193, True
+Won last trade. 195
+Sucessfully updated the statfile at age: 193
+Sucessfully read statefile at age: 194, False
+Lost last trade. 196
+Sucessfully updated the statfile at age: 194
+Sucessfully read statefile at age: 195, True
+Won last trade. 197
+Sucessfully updated the statfile at age: 195
+Sucessfully read statefile at age: 196, False
+Lost last trade. 198
+Sucessfully updated the statfile at age: 196
+Sucessfully read statefile at age: 197, False
+Lost last trade. 199
+Sucessfully updated the statfile at age: 197
+Sucessfully read statefile at age: 198, False
+Lost last trade. 200
+Sucessfully updated the statfile at age: 198
+Sucessfully read statefile at age: 199, False
+Lost last trade. 201
+Sucessfully updated the statfile at age: 199
+Sucessfully read statefile at age: 200, True
+Won last trade. 202
+Sucessfully updated the statfile at age: 200
+Sucessfully read statefile at age: 201, True
+Won last trade. 203
+Sucessfully updated the statfile at age: 201
+Sucessfully read statefile at age: 202, False
+Lost last trade. 204
+Sucessfully updated the statfile at age: 202
+Sucessfully read statefile at age: 203, True
+Won last trade. 205
+Sucessfully updated the statfile at age: 203
+Sucessfully read statefile at age: 204, True
+Won last trade. 206
+Sucessfully updated the statfile at age: 204
+Sucessfully read statefile at age: 205, True
+Won last trade. 207
+Sucessfully updated the statfile at age: 205
+Sucessfully read statefile at age: 206, True
+Won last trade. 208
+Sucessfully updated the statfile at age: 206
+Sucessfully read statefile at age: 207, True
+Won last trade. 209
+Sucessfully updated the statfile at age: 207
+Sucessfully read statefile at age: 208, True
+Won last trade. 210
+Sucessfully updated the statfile at age: 208
+Sucessfully read statefile at age: 209, False
+Lost last trade. 211
+Sucessfully updated the statfile at age: 209
+Sucessfully read statefile at age: 210, True
+Won last trade. 212
+Sucessfully updated the statfile at age: 210
+Sucessfully read statefile at age: 211, True
+Won last trade. 213
+Sucessfully updated the statfile at age: 211
+Sucessfully read statefile at age: 212, True
+Won last trade. 214
+Sucessfully updated the statfile at age: 212
+Sucessfully read statefile at age: 213, True
+Won last trade. 215
+Sucessfully updated the statfile at age: 213
+Sucessfully read statefile at age: 214, True
+Won last trade. 216
+Sucessfully updated the statfile at age: 214
+Sucessfully read statefile at age: 215, False
+Lost last trade. 217
+Sucessfully updated the statfile at age: 215
+Sucessfully read statefile at age: 216, False
+Lost last trade. 218
+Sucessfully updated the statfile at age: 216
+Sucessfully read statefile at age: 217, False
+Lost last trade. 219
+Sucessfully updated the statfile at age: 217
+Sucessfully read statefile at age: 218, True
+Won last trade. 220
+Sucessfully updated the statfile at age: 218
+Sucessfully read statefile at age: 219, False
+Lost last trade. 221
+Sucessfully updated the statfile at age: 219
+Sucessfully read statefile at age: 220, True
+Won last trade. 222
+Sucessfully updated the statfile at age: 220
+Sucessfully read statefile at age: 221, False
+Lost last trade. 223
+Sucessfully updated the statfile at age: 221
+Sucessfully read statefile at age: 222, False
+Lost last trade. 224
+Sucessfully updated the statfile at age: 222
+Sucessfully read statefile at age: 223, False
+Lost last trade. 225
+Sucessfully updated the statfile at age: 223
+Sucessfully read statefile at age: 224, False
+Lost last trade. 226
+Sucessfully updated the statfile at age: 224
+Sucessfully read statefile at age: 225, False
+Lost last trade. 227
+Sucessfully updated the statfile at age: 225
+Sucessfully read statefile at age: 226, False
+Lost last trade. 228
+Sucessfully updated the statfile at age: 226
+Sucessfully read statefile at age: 227, True
+Won last trade. 229
+Sucessfully updated the statfile at age: 227
+Sucessfully read statefile at age: 228, True
+Won last trade. 230
+Sucessfully updated the statfile at age: 228
+Sucessfully read statefile at age: 229, True
+Won last trade. 231
+Sucessfully updated the statfile at age: 229
+Sucessfully read statefile at age: 230, True
+Won last trade. 232
+Sucessfully updated the statfile at age: 230
+Sucessfully read statefile at age: 231, True
+Won last trade. 233
+Sucessfully updated the statfile at age: 231
+Sucessfully read statefile at age: 232, False
+Lost last trade. 234
+Sucessfully updated the statfile at age: 232
+Sucessfully read statefile at age: 233, True
+Won last trade. 235
+Sucessfully updated the statfile at age: 233
+Sucessfully read statefile at age: 234, True
+Won last trade. 236
+Sucessfully updated the statfile at age: 234
+Sucessfully read statefile at age: 235, True
+Won last trade. 237
+Sucessfully updated the statfile at age: 235
+Sucessfully read statefile at age: 236, False
+Lost last trade. 238
+Sucessfully updated the statfile at age: 236
+Sucessfully read statefile at age: 237, True
+Won last trade. 239
+Sucessfully updated the statfile at age: 237
+Sucessfully read statefile at age: 238, True
+Won last trade. 240
+Sucessfully updated the statfile at age: 238
+Sucessfully read statefile at age: 239, False
+Lost last trade. 241
+Sucessfully updated the statfile at age: 239
+Sucessfully read statefile at age: 240, True
+Won last trade. 242
+Sucessfully updated the statfile at age: 240
+Sucessfully read statefile at age: 241, True
+Won last trade. 243
+Sucessfully updated the statfile at age: 241
+Sucessfully read statefile at age: 242, True
+Won last trade. 244
+Sucessfully updated the statfile at age: 242
+Sucessfully read statefile at age: 243, True
+Won last trade. 245
+Sucessfully updated the statfile at age: 243
+Sucessfully read statefile at age: 244, False
+Lost last trade. 246
+Sucessfully updated the statfile at age: 244
+Sucessfully read statefile at age: 245, False
+Lost last trade. 247
+Sucessfully updated the statfile at age: 245
+Sucessfully read statefile at age: 246, False
+Lost last trade. 248
+Sucessfully updated the statfile at age: 246
+Sucessfully read statefile at age: 247, False
+Lost last trade. 249
+Sucessfully updated the statfile at age: 247
+Sucessfully read statefile at age: 248, False
+Lost last trade. 250
+Sucessfully updated the statfile at age: 248
+Sucessfully read statefile at age: 249, False
+Lost last trade. 251
+Sucessfully updated the statfile at age: 249
+Sucessfully read statefile at age: 250, True
+Won last trade. 252
+Sucessfully updated the statfile at age: 250
+Sucessfully read statefile at age: 251, False
+Lost last trade. 253
+Sucessfully updated the statfile at age: 251
+Sucessfully read statefile at age: 252, True
+Won last trade. 254
+Sucessfully updated the statfile at age: 252
+Sucessfully read statefile at age: 253, True
+Won last trade. 255
+Sucessfully updated the statfile at age: 253
+Sucessfully read statefile at age: 254, False
+Lost last trade. 256
+Sucessfully updated the statfile at age: 254
+Sucessfully read statefile at age: 255, False
+Lost last trade. 257
+Sucessfully updated the statfile at age: 255
+Sucessfully read statefile at age: 256, True
+Won last trade. 258
+Sucessfully updated the statfile at age: 256
+Sucessfully read statefile at age: 0, True
+Won last trade. 2
+Sucessfully updated the statfile at age: 0
+Sucessfully read statefile at age: 1, False
+Lost last trade. 3
+Sucessfully updated the statfile at age: 1
+Sucessfully read statefile at age: 2, True
+Won last trade. 4
+Sucessfully updated the statfile at age: 2
+Sucessfully read statefile at age: 3, False
+Lost last trade. 5
+Sucessfully updated the statfile at age: 3
+Sucessfully read statefile at age: 4, False
+Lost last trade. 6
+Sucessfully updated the statfile at age: 4
+Sucessfully read statefile at age: 5, False
+Lost last trade. 7
+Sucessfully updated the statfile at age: 5
+Sucessfully read statefile at age: 6, False
+Lost last trade. 8
+Sucessfully updated the statfile at age: 6
+Sucessfully read statefile at age: 7, False
+Lost last trade. 9
+Sucessfully updated the statfile at age: 7
+Sucessfully read statefile at age: 8, True
+Won last trade. 10
+Sucessfully updated the statfile at age: 8
+Sucessfully read statefile at age: 9, False
+Lost last trade. 11
+Sucessfully updated the statfile at age: 9
+Sucessfully read statefile at age: 10, True
+Won last trade. 12
+Sucessfully updated the statfile at age: 10
+Sucessfully read statefile at age: 11, True
+Won last trade. 13
+Sucessfully updated the statfile at age: 11
+Sucessfully read statefile at age: 10, True
+Won last trade. 12
+Sucessfully updated the statfile at age: 10
+Sucessfully read statefile at age: 11, True
+Won last trade. 13
+Sucessfully updated the statfile at age: 11
+Sucessfully read statefile at age: 10, True
+Won last trade. 12
+Sucessfully updated the statfile at age: 10
+Sucessfully read statefile at age: 11, True
+Won last trade. 13
+Sucessfully updated the statfile at age: 11
+Sucessfully read statefile at age: 10, True
+Won last trade. 12
+Sucessfully updated the statfile at age: 10
+Sucessfully read statefile at age: 11, True
+Won last trade. 13
+Sucessfully updated the statfile at age: 11
+Sucessfully read statefile at age: 10, True
+Won last trade. 12
+Sucessfully updated the statfile at age: 10
+Sucessfully read statefile at age: 11, True
+Won last trade. 13
+Sucessfully updated the statfile at age: 11
+Sucessfully read statefile at age: 10, True
+Won last trade. 12
+Sucessfully updated the statfile at age: 10
+Sucessfully read statefile at age: 11, True
+Won last trade. 13
+Sucessfully updated the statfile at age: 11
+Sucessfully read statefile at age: 10, True
+Won last trade. 12
+Sucessfully updated the statfile at age: 10
+Sucessfully read statefile at age: 11, True
+Won last trade. 13
+Sucessfully updated the statfile at age: 11
+Sucessfully read statefile at age: 10, True
+Won last trade. 12
+Sucessfully updated the statfile at age: 10
+Sucessfully read statefile at age: 11, True
+Won last trade. 13
+Sucessfully updated the statfile at age: 11
+Sucessfully read statefile at age: 12, False
+Lost last trade. 14
+Sucessfully updated the statfile at age: 12
+Sucessfully read statefile at age: 13, False
+Lost last trade. 15
+Sucessfully updated the statfile at age: 13
+Sucessfully read statefile at age: 14, False
+Lost last trade. 16
+Sucessfully updated the statfile at age: 14
+Sucessfully read statefile at age: 15, False
+Lost last trade. 17
+Sucessfully updated the statfile at age: 15
+Sucessfully read statefile at age: 16, False
+Lost last trade. 18
+Sucessfully updated the statfile at age: 16
+Sucessfully read statefile at age: 17, False
+Lost last trade. 19
+Sucessfully updated the statfile at age: 17
+Sucessfully read statefile at age: 18, False
+Lost last trade. 20
+Sucessfully updated the statfile at age: 18
+Sucessfully read statefile at age: 19, False
+Lost last trade. 21
+Sucessfully updated the statfile at age: 19
+Sucessfully read statefile at age: 20, False
+Lost last trade. 22
+Sucessfully updated the statfile at age: 20
+Sucessfully read statefile at age: 21, False
+Lost last trade. 23
+Sucessfully updated the statfile at age: 21
+Sucessfully read statefile at age: 22, False
+Lost last trade. 24
+Sucessfully updated the statfile at age: 22
+Sucessfully read statefile at age: 23, False
+Lost last trade. 25
+Sucessfully updated the statfile at age: 23
+Sucessfully read statefile at age: 24, False
+Lost last trade. 26
+Sucessfully updated the statfile at age: 24
+Sucessfully read statefile at age: 25, False
+Lost last trade. 27
+Sucessfully updated the statfile at age: 25
+Sucessfully read statefile at age: 26, False
+Lost last trade. 28
+Sucessfully updated the statfile at age: 26
+Sucessfully read statefile at age: 10, False
+Lost last trade. 12
+Sucessfully updated the statfile at age: 10
+Sucessfully read statefile at age: 11, False
+Lost last trade. 13
+Sucessfully updated the statfile at age: 11
+Sucessfully read statefile at age: 12, False
+Lost last trade. 14
+Sucessfully updated the statfile at age: 12
+Sucessfully read statefile at age: 13, False
+Lost last trade. 15
+Sucessfully updated the statfile at age: 13
+Sucessfully read statefile at age: 14, False
+Lost last trade. 16
+Sucessfully updated the statfile at age: 14
+Sucessfully read statefile at age: 15, False
+Lost last trade. 17
+Sucessfully updated the statfile at age: 15
+Sucessfully read statefile at age: 16, False
+Lost last trade. 18
+Sucessfully updated the statfile at age: 16
+Sucessfully read statefile at age: 17, False
+Lost last trade. 19
+Sucessfully updated the statfile at age: 17
+Sucessfully read statefile at age: 18, False
+Lost last trade. 20
+Sucessfully updated the statfile at age: 18
+Sucessfully read statefile at age: 19, False
+Lost last trade. 21
+Sucessfully updated the statfile at age: 19
+Sucessfully read statefile at age: 20, False
+Lost last trade. 22
+Sucessfully updated the statfile at age: 20
