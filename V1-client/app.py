@@ -3,6 +3,7 @@ from modules.statefile import read_statefile, write_statefile
 from modules.trader import open_new_trade
 from modules.messanger import notify_message
 from modules.backtester import trade_outcome
+import time
 
 def read_outcome():
     return True
@@ -42,42 +43,48 @@ def calculate_next_risk(newstate):
 
 def backtest(age):
     print("Backtesting... : age", age)
-    return trade_outcome("/home/main/Documents/GitHub/MEM-Trading/V1-client/testing/goldprice/2024/dataset_2024.csv", age+1)
+    return trade_outcome("/home/main/Documents/GitHub/MEM-Trading/V1-client/testing/goldprice/10-20/dataset_2010-2020.csv", age+1)
 
 def iteration():
     # lastoutcome = read_outcome() # bool
     statefile = read_statefile() # json
-    lastoutcome = False # backtest(statefile["age"])
+    lastoutcome = backtest(statefile["age"])
 
     initialrisk = statefile["initial_risk"]
     currentnode = statefile["current_node"]
     lastnode = statefile["last_node"]
     balance = statefile["balance"]
 
-    log(f"Sucessfully read statefile at age: {statefile['age']}, {lastoutcome}")
+    # log(f"Sucessfully read statefile at age: {statefile['age']}, {lastoutcome}")
     increment_nodes(currentnode, statefile)
     
     if lastoutcome:
-        log(f"Won last trade. {statefile["age"]+2}")
+        # log(f"Won last trade. {statefile["age"]+2}")
         if statefile["nodes"][currentnode]["state"] == 0:
             balance += initialrisk
         if statefile["nodes"][currentnode]["state"] >= 1:
-            print("THe index is: ", )
             balance += calculate_next_risk(statefile["nodes"][currentnode]["state"])
         reset_scale(currentnode, statefile)
         statefile["nodes"][currentnode]["state"] = 0
 
         write_statefile("nodes", statefile["nodes"])
-        print("Balance is: ", balance)
         write_statefile("balance", balance)
     if lastoutcome == False:
-        log(f"Lost last trade. {statefile["age"]+2}")
+        # log(f"Lost last trade. {statefile["age"]+2}")
+        if statefile["nodes"][currentnode]["state"] == 0:
+            balance -= initialrisk
+        if statefile["nodes"][currentnode]["state"] >= 1:
+            balance -= calculate_next_risk(statefile["nodes"][currentnode]["state"]+1)/2
         statefile["nodes"][currentnode]["state"] += 1
         statefile["nodes"][currentnode]["scale"] = brew_scale(statefile["nodes"][currentnode]["scale"], statefile["nodes"][currentnode]["state"])
 
         write_statefile("nodes", statefile["nodes"])
+        write_statefile("balance", balance)
 
-    log(f"Sucessfully updated the statfile at age: {statefile['age']}")
+    log(f"age: {statefile['age']}, balance: {balance}, currentnode: {currentnode}, lastnode: {lastnode}, lastoutcome: {lastoutcome}")
     # open_new_trade(read_statefile()) # read statefile again after updates
     # notify_message(read_statefile()) # put the data to a discord chat for info
-iteration()
+
+for _ in range(2500):
+    iteration()
+    time.sleep(0.1)  # Wait for 300 milliseconds

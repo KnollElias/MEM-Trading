@@ -12,6 +12,10 @@ def trade_outcome(csv_path, index):
         change_percent = float(trade['Change %'].strip('%'))
         # open_price = float(trade['Open'])
         # close_price = float(trade['Price'])
+
+        if not trade:
+            print("Backtesting done")
+            return False
         
         if change_percent > 0.01: # or (open_price - close_price) / close_price > 0.001:
             return True
