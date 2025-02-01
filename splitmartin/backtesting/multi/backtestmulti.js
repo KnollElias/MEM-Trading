@@ -5,7 +5,7 @@
 const fs = require('fs');
 
 const inputPath = "/home/main/Documents/GitHub/MEM-Trading/splitmartin/btc-usd-edited.csv";
-const outputPath = "/home/main/Desktop/multibacktest.csv";
+const outputPath = "/home/main/Desktop/topchart/multibacktest.csv";
 
 // Load dataset
 const data = fs.readFileSync(inputPath, 'utf8');

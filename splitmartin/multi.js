@@ -27,6 +27,9 @@ for (i = 0; i < iterations; i++) {
     upgradeNode();
     winThisRound = getRandomBool();
 
+    fs.appendFileSync('/home/main/Documents/GitHub/MEM-Trading/splitmartin/output_multi.csv', `${balances[0] + balances[1] + balances[2] + balances[3] + balances[4] + balances[5] + balances[6] + balances[7]},\n`);
+
+
     // raise risk if lost last round
     if (balances[nodeActive - 1] < balancesLastRound[nodeActive - 1]) { // lostLastRound
         risk[nodeActive - 1] *= riskMulityplier;

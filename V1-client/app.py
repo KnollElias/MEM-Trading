@@ -85,6 +85,6 @@ def iteration():
     # open_new_trade(read_statefile()) # read statefile again after updates
     # notify_message(read_statefile()) # put the data to a discord chat for info
 
-for _ in range(2500):
+for _ in range(1000):
     iteration()
     time.sleep(0.1)  # Wait for 300 milliseconds
