@@ -1,10 +1,10 @@
 {
-    "age": 7500,
+    "age": 0,
     "initial_risk": 1,
-    "balance": 3378.0,
+    "balance": 510.0,
     "real_balance": 0.0,
     "current_node": 0,
-    "last_node": 1,
+    "last_node": -1,
     "nodes": [
         {
             "index": 1,
