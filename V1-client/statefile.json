@@ -1,19 +1,16 @@
 {
-    "age": 1824,
+    "age": 7500,
     "initial_risk": 1,
-    "balance": 887.0,
+    "balance": 3378.0,
     "real_balance": 0.0,
-    "current_node": 10,
-    "last_node": 9,
+    "current_node": 0,
+    "last_node": 1,
     "nodes": [
         {
             "index": 1,
             "current_risk": 1,
             "state": 0,
             "scale": [
-                0,
-                0,
-                0,
                 0,
                 0,
                 0,
@@ -26,204 +23,6 @@
             "current_risk": 1,
             "state": 0,
             "scale": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ]
-        },
-        {
-            "index": 3,
-            "current_risk": 1,
-            "state": 0,
-            "scale": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ]
-        },
-        {
-            "index": 4,
-            "current_risk": 1,
-            "state": 0,
-            "scale": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ]
-        },
-        {
-            "index": 5,
-            "current_risk": 1,
-            "state": 0,
-            "scale": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ]
-        },
-        {
-            "index": 6,
-            "current_risk": 1,
-            "state": 2,
-            "scale": [
-                1,
-                2,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ]
-        },
-        {
-            "index": 7,
-            "current_risk": 1,
-            "state": 0,
-            "scale": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ]
-        },
-        {
-            "index": 8,
-            "current_risk": 1,
-            "state": 0,
-            "scale": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ]
-        },
-        {
-            "index": 9,
-            "current_risk": 1,
-            "state": 3,
-            "scale": [
-                1,
-                2,
-                4,
-                0,
-                0,
-                0,
-                0,
-                0
-            ]
-        },
-        {
-            "index": 10,
-            "current_risk": 1,
-            "state": 8,
-            "scale": [
-                1,
-                2,
-                4,
-                8,
-                16,
-                32,
-                64,
-                128
-            ]
-        },
-        {
-            "index": 11,
-            "current_risk": 1,
-            "state": 1,
-            "scale": [
-                1,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ]
-        },
-        {
-            "index": 12,
-            "current_risk": 1,
-            "state": 1,
-            "scale": [
-                1,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ]
-        },
-        {
-            "index": 13,
-            "current_risk": 1,
-            "state": 0,
-            "scale": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ]
-        },
-        {
-            "index": 14,
-            "current_risk": 1,
-            "state": 2,
-            "scale": [
-                1,
-                2,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ]
-        },
-        {
-            "index": 15,
-            "current_risk": 1,
-            "state": 2,
-            "scale": [
-                1,
-                2,
-                0,
                 0,
                 0,
                 0,

@@ -1,7 +1,7 @@
 const fs = require('fs');
 
-balances = [100];
-balancesLastRound = [100];
+balances = [520];
+balancesLastRound = [520];
 nodeCount = 1;
 nodeActive = nodeCount; // so the first iteration starts with one, could also set it to "1" but meh
 
@@ -11,7 +11,7 @@ loss = 1;
 gain = 0.9;
 riskMulityplier = 2;
 
-iterations = 3600;
+iterations = 9000;
 
 function upgradeNode() {
     nodeActive = nodeActive == nodeCount ? 1 : nodeActive + 1;

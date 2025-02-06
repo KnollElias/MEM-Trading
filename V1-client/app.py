@@ -4,9 +4,11 @@ from modules.trader import open_new_trade
 from modules.messanger import notify_message
 from modules.backtester import trade_outcome
 import time
+import random
 
 def read_outcome():
-    return True
+    return random.random() < 0.5
+    # return True
 
 def increment_nodes(currentnode, statefile):
     # make the last the current
@@ -48,7 +50,7 @@ def backtest(age):
 def iteration():
     # lastoutcome = read_outcome() # bool
     statefile = read_statefile() # json
-    lastoutcome = backtest(statefile["age"])
+    lastoutcome = read_outcome() #backtest(statefile["age"])
 
     initialrisk = statefile["initial_risk"]
     currentnode = statefile["current_node"]
@@ -70,21 +72,32 @@ def iteration():
         write_statefile("nodes", statefile["nodes"])
         write_statefile("balance", balance)
     if lastoutcome == False:
-        # log(f"Lost last trade. {statefile["age"]+2}")
-        if statefile["nodes"][currentnode]["state"] == 0:
-            balance -= initialrisk
-        if statefile["nodes"][currentnode]["state"] >= 1:
-            balance -= calculate_next_risk(statefile["nodes"][currentnode]["state"]+1)/2
-        statefile["nodes"][currentnode]["state"] += 1
-        statefile["nodes"][currentnode]["scale"] = brew_scale(statefile["nodes"][currentnode]["scale"], statefile["nodes"][currentnode]["state"])
+        if statefile["nodes"][currentnode]["state"] == len(statefile["nodes"][currentnode]["scale"]):
+            return False
+        else:
+            # log(f"Lost last trade. {statefile["age"]+2}")
+            if statefile["nodes"][currentnode]["state"] == 0:
+                balance -= initialrisk
+            if statefile["nodes"][currentnode]["state"] >= 1:
+                balance -= calculate_next_risk(statefile["nodes"][currentnode]["state"]+1)/2
+            statefile["nodes"][currentnode]["state"] += 1
+            statefile["nodes"][currentnode]["scale"] = brew_scale(statefile["nodes"][currentnode]["scale"], statefile["nodes"][currentnode]["state"])
 
-        write_statefile("nodes", statefile["nodes"])
-        write_statefile("balance", balance)
+            write_statefile("nodes", statefile["nodes"])
+            write_statefile("balance", balance)
 
     log(f"age: {statefile['age']}, balance: {balance}, currentnode: {currentnode}, lastnode: {lastnode}, lastoutcome: {lastoutcome}")
     # open_new_trade(read_statefile()) # read statefile again after updates
     # notify_message(read_statefile()) # put the data to a discord chat for info
 
-for _ in range(1000):
-    iteration()
-    time.sleep(0.1)  # Wait for 300 milliseconds
+def tradingrunn():
+    for _ in range(250):
+        survived = iteration()
+        if survived == False:
+            print("Failed")
+    print("Ok")
+
+
+for _ in range(10):
+    tradingrunn()
+    

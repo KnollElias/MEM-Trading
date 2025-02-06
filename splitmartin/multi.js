@@ -1,17 +1,18 @@
 const fs = require('fs');
 
-balances = [12.5, 12.5, 12.5, 12.5, 12.5, 12.5, 12.5, 12.5];
-balancesLastRound = [12.5, 12.5, 12.5, 12.5, 12.5, 12.5, 12.5, 12.5];
-nodeCount = 8;
+startingBalancePerScale = 130;
+balances = [startingBalancePerScale, startingBalancePerScale, startingBalancePerScale, startingBalancePerScale];
+balancesLastRound = [startingBalancePerScale, startingBalancePerScale, startingBalancePerScale, startingBalancePerScale];
+nodeCount = 4;
 nodeActive = nodeCount; // so the first iteration starts with one, could also set it to "1" but meh
 
 riskInitial = 1;
-risk = [riskInitial, riskInitial, riskInitial, riskInitial, riskInitial, riskInitial, riskInitial, riskInitial];
+risk = [riskInitial, riskInitial, riskInitial, riskInitial];
 loss = 1;
 gain = 0.9;
 riskMulityplier = 2;
 
-iterations = 3600;
+iterations = 9000;
 
 function upgradeNode() {
     nodeActive = nodeActive == nodeCount ? 1 : nodeActive + 1;
@@ -27,12 +28,13 @@ for (i = 0; i < iterations; i++) {
     upgradeNode();
     winThisRound = getRandomBool();
 
-    fs.appendFileSync('/home/main/Documents/GitHub/MEM-Trading/splitmartin/output_multi.csv', `${balances[0] + balances[1] + balances[2] + balances[3] + balances[4] + balances[5] + balances[6] + balances[7]},\n`);
+    // fs.appendFileSync('/home/main/Documents/GitHub/MEM-Trading/splitmartin/output_multi.csv', `${balances[0] + balances[1] + balances[2] + balances[3] + balances[4] + balances[5] + balances[6] + balances[7]},\n`);
 
 
     // raise risk if lost last round
     if (balances[nodeActive - 1] < balancesLastRound[nodeActive - 1]) { // lostLastRound
-        risk[nodeActive - 1] *= riskMulityplier;
+        risk[nodeActive - 1] =  risk[nodeActive - 1] * riskMulityplier;
+        console.log("new risk: for scale: " + nodeActive + " is: " + risk[nodeActive - 1]);
     } else {
         risk[nodeActive - 1] = riskInitial;
     }
@@ -44,12 +46,12 @@ for (i = 0; i < iterations; i++) {
         balances[nodeActive - 1] -= risk[nodeActive - 1] * loss;
     }
 
-    if ((i % nodeCount) == 0) {
-        // console.log("  ");
-    }
     
     if (balances[nodeActive - 1] > 0) {
-        console.warn("" + i + ", " + nodeActive  + ", " + winThisRound  + ", " + risk[nodeActive - 1]  + ", " + balances[nodeActive - 1]);
+        if ((i % nodeCount) == 0) {
+            // console.log("  ");
+            console.warn("" + i + ", " + nodeActive  + ", " + winThisRound  + ", " + risk[nodeActive - 1]  + ", " + balances[nodeActive - 1]);
+        }
     } else {
         console.error("" + i  + ", " + nodeActive  + ", " + winThisRound  + ", " + risk[nodeActive - 1]  + ", " + balances[nodeActive - 1]);
         break;
@@ -60,5 +62,5 @@ for (i = 0; i < iterations; i++) {
     }
 }
 
-fs.appendFileSync('/home/main/Documents/GitHub/MEM-Trading/splitmartin/output_multi.csv', `${balances[0] + balances[1] + balances[2] + balances[3] + balances[4] + balances[5] + balances[6] + balances[7]},\n`);
+fs.appendFileSync('/home/main/Documents/GitHub/MEM-Trading/splitmartin/output_multi.csv', `${balances[0] + balances[1] + balances[2] + balances[3]},\n`);
 console.log(balances);
